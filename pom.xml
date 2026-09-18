@@ -23,10 +23,18 @@
         <java.version>25</java.version>
         <spring-ai.version>2.0.1</spring-ai.version>
         <langchain4j.version>1.19.0</langchain4j.version>
+        <google-genai.version>1.72.0</google-genai.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+
+            <!-- Google GenAI -->
+            <dependency>
+                <groupId>com.google.genai</groupId>
+                <artifactId>google-genai</artifactId>
+                <version>${google-genai.version}</version>
+            </dependency>
 
             <!-- Spring AI -->
             <dependency>
@@ -78,17 +86,26 @@
         </dependency>
 
         <!-- ========================= -->
+        <!-- Google GenAI -->
+        <!-- ========================= -->
+
+        <dependency>
+            <groupId>com.google.genai</groupId>
+            <artifactId>google-genai</artifactId>
+        </dependency>
+
+        <!-- ========================= -->
         <!-- Spring AI -->
         <!-- ========================= -->
 
         <!-- Google Gemini -->
-		<!--
+        <!--
         <dependency>
             <groupId>org.springframework.ai</groupId>
             <artifactId>spring-ai-starter-model-google-genai</artifactId>
         </dependency>
-		-->
-		
+        -->
+
         <!-- Ollama -->
         <dependency>
             <groupId>org.springframework.ai</groupId>
